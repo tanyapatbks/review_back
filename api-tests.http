@@ -1,0 +1,31 @@
+@baseUrl = http://localhost:5001/api
+
+### Create a new review
+POST {{baseUrl}}/reviews
+Content-Type: application/json
+
+{
+  "petId": "001",
+  "petName": "BigBlackDog",
+  "userId": "0000001",
+  "userName": "John Doe",
+  "content": "Great pet!"
+}
+
+### Get all reviews for a specific pet
+GET {{baseUrl}}/reviews/001
+
+### Update a review
+PUT {{baseUrl}}/reviews/671513269166d46803fa939d
+Content-Type: application/json
+
+{
+  "petId": "001",
+  "petName": "BigBlackDog",
+  "userId": "0000001",
+  "userName": "John Doe",
+  "content": "Bad Smell Pet!!!"
+}
+
+### Delete a review
+DELETE {{baseUrl}}/reviews/671513269166d46803fa939d
